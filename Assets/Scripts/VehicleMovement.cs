@@ -75,8 +75,6 @@ public class VehicleMovement : MonoBehaviour
 
         if (isOnGround)
 		{
-			Debug.Log("На замле" + height + " < " + (maxGroundDist - 3));
-
             //...determine how high off the ground it is...
             //...save the normal of the ground...
             groundNormal = hitInfo.normal.normalized;
@@ -105,7 +103,6 @@ public class VehicleMovement : MonoBehaviour
         }
 		else
 		{
-            Debug.Log("Не На замле: " + height+  " > "+ maxGroundDist + 3);
             //...use Up to represent the "ground normal". This will cause our ship to
             //self-right itself in a case where it flips over
             groundNormal = Vector3.up;
